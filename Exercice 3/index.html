@@ -13,15 +13,16 @@
     <p>Demander un nombre à l'utilisateur. S'il est pair afficher Le nombre est pair, sinon afficher Le nombre est impair.</p>
 
     <script>
-        let number = prompt("Choisissez un chiffre");
+        let number = +prompt("Choisissez un chiffre");
 
-        if(number%2 ==0) {
+        if (isNaN(number)) {
+        alert('Choisissez un chiffre!');
+        }
+
+        else if(number%2 ==0) {
             alert("Le nombre est pair")
         }
 
-        if(isNaN(number))
-        alert('Choisissez un chiffre!');
-        
          else {
              alert("Le nombre est impair")
          }

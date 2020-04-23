@@ -18,16 +18,20 @@
 
 
     <script>
-        let age = prompt('Quel âge avez-vous ?');
+        let number = +prompt('Quel âge avez-vous ?');
 
-        if (age >= 18)
-            alert('Vous êtes majeur');
+        if (isNaN(number)) {
+            alert('Vous devez entrer votre  âge !');
+        }
 
-            if(isNaN(age))
-        alert('Vous devez entrer votre  âge !');
- 
-            else
-                alert('Vous êtes mineur');
+        else if (number >= 18) {
+        alert('Vous êtes majeur');
+        }
+
+        else {
+            alert('Vous êtes mineur');
+        }
+
     </script>
 </body>
 
